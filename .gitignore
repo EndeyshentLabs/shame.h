@@ -1,0 +1,8 @@
+[Bb]uild/
+*.o
+*.out
+*.app
+*.exe
+*.a
+*.so
+.cache/
