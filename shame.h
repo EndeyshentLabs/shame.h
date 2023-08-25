@@ -42,10 +42,8 @@ const char* readEntireFile(const char* fileName);
 
 #define vector_free(vec) \
     do { \
-        for (size_t _vector_free_i = 0; _vector_free_i < (vec).size; _vector_free_i++) { \
-            free(&(vec).data[_vector_free_i]); \
-        } \
         free((vec).data); \
+        (vec).data = NULL; \
         (vec).size = 0; \
         (vec).capacity = 0; \
     } while(0);
